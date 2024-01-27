@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Capitals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    #capitalDisplay {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Country Capitals</h2>
+
+  <label for="countrySelect">Select a country:</label>
+  <select id="countrySelect" onchange="displayCapital()">
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="uk">UK</option>
+    <option value="france">France</option>
+    <option value="germany">Germany</option>
+  </select>
+
+  <div id="capitalDisplay"></div>
+
+  <script>
+    function displayCapital() {
+      // Get the selected country from the dropdown
+      var selectedCountry = document.getElementById("countrySelect").value;
+
+      // Map countries to their capitals
+      var countryCapitals = {
+        "usa": "Washington, D.C.",
+        "canada": "Ottawa",
+        "uk": "London",
+        "france": "Paris",
+        "germany": "Berlin"
+      };
+
+      // Get the capital corresponding to the selected country
+      var selectedCapital = countryCapitals[selectedCountry];
+
+      // Display the capital in the designated div
+      document.getElementById("capitalDisplay").innerHTML = "Capital: " + selectedCapital;
+    }
+  </script>
+
+</body>
+</html>

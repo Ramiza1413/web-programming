@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <form action="Question5.php" method="post">
+        <label for="num1">Enter first number:</label>
+        <input type="number" name="num1" required>
+        <br>
+        
+        <label for="operator">Select operator:</label>
+        <select name="operator" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <br>
+        
+        <label for="num2">Enter second number:</label>
+        <input type="number" name="num2" required>
+        <br>
+        
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
